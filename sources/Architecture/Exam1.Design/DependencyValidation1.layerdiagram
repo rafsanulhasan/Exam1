@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d0ed88c0-db20-4ac4-b9fa-e72c2b540855" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="ca55000e-9530-4eae-b6a7-d9c028d09567" name="Comment1">
+      <body>SQL</body>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="8ad4294e-b47a-4f8d-a471-920fabc27776" name="Data Layer">
+      <childLayers>
+        <layer Id="98d9b237-6eb2-4e80-8cac-edd2d6784857" name="Entities">
+          <references>
+            <reference Id="031ca74f-e255-42f8-8c0d-23b9d1e7c7eb" name="Course1">
+              <ArtifactNode Label="Course" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=Course)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=Course)" Label="Course" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="185f69ea-79b0-4633-ac9c-2d58a03271ba" name="Student">
+              <ArtifactNode Label="Student" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=Student)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=Student)" Label="Student" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="01406c5c-1ad6-4ef3-8f5e-971fdb52085e" name="StudentCourses">
+              <ArtifactNode Label="StudentCourses" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=StudentCourses)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=StudentCourses)" Label="StudentCourses" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="bf7e1a3e-3669-4cf0-b8fa-61fc36a0e79b" name="Topic">
+              <ArtifactNode Label="Topic" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=Topic)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Entities Type=Topic)" Label="Topic" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="543dfe9a-cc91-401e-a179-6cbf90f8cf2f" name="Layer Of Abstraction">
+          <references>
+            <reference Id="2b455eb1-ec05-4425-96c0-d9991a3cf460" name="IEntityBase&lt;T&gt;1">
+              <ArtifactNode Label="IEntityBase&lt;T&gt;" Category="CodeSchema_Interface" Id="(Assembly=Exam1.Core Namespace=Exam1.Library.Data.Core.Entities Type=(Name=IEntityBase GenericParameterCount=1))" />
+              <ExpandedNode Id="(Assembly=Exam1.Core Namespace=Exam1.Library.Data.Core.Entities Type=(Name=IEntityBase GenericParameterCount=1))" Label="IEntityBase&lt;T&gt;" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="0d687e74-038a-4f0c-a6aa-be9f8e86ced7" name="EntityBase&lt;T&gt;">
+              <ArtifactNode Label="EntityBase&lt;T&gt;" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Core.Entities Type=(Name=EntityBase GenericParameterCount=1))" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data.Core.Entities Type=(Name=EntityBase GenericParameterCount=1))" Label="EntityBase&lt;T&gt;" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="92717f84-aa27-4043-9a34-41093de9deac" name="IRepository&lt;TEntity, TKey&gt;">
+              <ArtifactNode Label="IRepository&lt;TEntity, TKey&gt;" Category="CodeSchema_Interface" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=(Name=IRepository GenericParameterCount=2))" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=(Name=IRepository GenericParameterCount=2))" Label="IRepository&lt;TEntity, TKey&gt;" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="fa909c76-ebb6-4e0c-bc9a-2e1b0f4ca996" name="UnitOfWorkBase&lt;TEntity, TKey, TContext, TRepository&gt;">
+              <ArtifactNode Label="UnitOfWorkBase&lt;TEntity, TKey, TContext, TRepository&gt;" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=(Name=UnitOfWorkBase GenericParameterCount=4))" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=(Name=UnitOfWorkBase GenericParameterCount=4))" Label="UnitOfWorkBase&lt;TEntity, TKey, TContext, TRepository&gt;" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="6eeb234c-071d-4be3-8c70-f203ae68b528" name="Components">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="70666072-40f9-44e3-aa25-f65758244497" direction="Forward">
+              <layerMoniker Id="98d9b237-6eb2-4e80-8cac-edd2d6784857" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="3978a8dd-2f1d-4159-994d-7d26b09a4a4e" direction="Forward">
+              <layerMoniker Id="543dfe9a-cc91-401e-a179-6cbf90f8cf2f" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="0ccd2050-a145-43ff-b767-29a681df705f" name="RepositoryBase&lt;TEntity, TKey, TContext&gt;">
+              <ArtifactNode Label="RepositoryBase&lt;TEntity, TKey, TContext&gt;" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=(Name=RepositoryBase GenericParameterCount=3))" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=(Name=RepositoryBase GenericParameterCount=3))" Label="RepositoryBase&lt;TEntity, TKey, TContext&gt;" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="85e6d3f3-e4c0-427c-a525-83f9aa446e27" name="CourseRepository">
+              <ArtifactNode Label="CourseRepository" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=CourseRepository)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=CourseRepository)" Label="CourseRepository" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="b516846e-c079-4fec-ac00-d8d7246d19d8" name="CourseUnitOfWork">
+              <ArtifactNode Label="CourseUnitOfWork" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=CourseUnitOfWork)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=CourseUnitOfWork)" Label="CourseUnitOfWork" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="7a576b95-eb21-40c7-8888-7020eacdafe9" name="StudentUnitOfWork">
+              <ArtifactNode Label="StudentUnitOfWork" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=StudentUnitOfWork)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=StudentUnitOfWork)" Label="StudentUnitOfWork" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="e261225b-0cba-4f9d-8c13-43bb5b9ca0b3" name="TopicRepository">
+              <ArtifactNode Label="TopicRepository" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=TopicRepository)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=TopicRepository)" Label="TopicRepository" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="6fe00b63-0f7a-40f8-b74c-59cd8f5c8bb8" name="StudentRepository1">
+              <ArtifactNode Label="StudentRepository" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=StudentRepository)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Data Type=StudentRepository)" Label="StudentRepository" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="a4ccf0fa-c1a1-49a8-a81b-240b99c971da" name="Business Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="d271ca3d-1bd5-41d9-bdd3-256334e3317c" direction="Forward">
+          <layerMoniker Id="8ad4294e-b47a-4f8d-a471-920fabc27776" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="6d44d5d1-f37a-4d51-a0a7-52532dabbd6d" name="ViewModels">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="05ad5441-a8c1-400e-a882-79b65ea09e21" direction="Forward">
+              <layerMoniker Id="17a56111-3061-494e-9979-223c0bc4d695" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="4d2b4cbc-530f-41e6-a805-dcfceda7fbd3" name="StudentViewModel">
+              <ArtifactNode Label="StudentViewModel" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.ViewModels Type=StudentViewModel)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.ViewModels Type=StudentViewModel)" Label="StudentViewModel" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="f83518bf-56c3-4cd6-9d1f-6721d708a4b3" name="Services">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="36d67be5-1969-4ffe-ab54-2196ff1efbc5" direction="Forward">
+              <layerMoniker Id="17a56111-3061-494e-9979-223c0bc4d695" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="e79cec3e-e2cf-437f-9b91-fb00b530f965" direction="Forward">
+              <layerMoniker Id="6d44d5d1-f37a-4d51-a0a7-52532dabbd6d" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="318c5dcb-efb1-4810-ba31-5443848e522a" name="StudentService">
+              <ArtifactNode Label="StudentService" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Services Type=StudentService)" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Services Type=StudentService)" Label="StudentService" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="17a56111-3061-494e-9979-223c0bc4d695" name="Layer Of Abstraction">
+          <references>
+            <reference Id="f04be4a5-465f-4a93-a0b9-33413bfa871b" name="IService">
+              <ArtifactNode Label="IService" Category="CodeSchema_Interface" Id="(Assembly=Exam1.Core Namespace=Exam1.Core Type=IService)" />
+              <ExpandedNode Id="(Assembly=Exam1.Core Namespace=Exam1.Core Type=IService)" Label="IService" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="17c9b6fe-21f3-4c0d-9b19-d9d7c7a3bd91" name="DataServiceBase&lt;TUnitOfWork, TEntity, TKey, TContext, TRepository&gt;">
+              <ArtifactNode Label="DataServiceBase&lt;TUnitOfWork, TEntity, TKey, TContext, TRepository&gt;" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Services Type=(Name=DataServiceBase GenericParameterCount=5))" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.Services Type=(Name=DataServiceBase GenericParameterCount=5))" Label="DataServiceBase&lt;TUnitOfWork, TEntity, TKey, TContext, TRepository&gt;" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="22d5a7b4-5c7d-4306-95d1-05da1036f718" name="ViewModelBase&lt;TService, TUnitOfWork, TEntity, TKey, TContext, TRepository&gt;">
+              <ArtifactNode Label="ViewModelBase&lt;TService, TUnitOfWork, TEntity, TKey, TContext, TRepository&gt;" Category="CodeSchema_Class" Id="(Assembly=Exam1.Library Namespace=Exam1.Library.ViewModels Type=(Name=ViewModelBase GenericParameterCount=6))" />
+              <ExpandedNode Id="(Assembly=Exam1.Library Namespace=Exam1.Library.ViewModels Type=(Name=ViewModelBase GenericParameterCount=6))" Label="ViewModelBase&lt;TService, TUnitOfWork, TEntity, TKey, TContext, TRepository&gt;" Category="CodeSchema_Class">
+                <LinkCategory Ref="Contains" />
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="73604893-0ba4-41f4-ae29-db286efeb85f" name="Application Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="dc15fade-3a8e-405e-a3e5-236ba2951d92" direction="Forward">
+          <layerMoniker Id="2414127b-8d93-4f3f-a73e-b185e7326083" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="8fb32209-dc63-450e-a160-6d200b6535a8" name="Controllers" />
+        <layer Id="604bf1d6-a6f3-419b-b856-8520a5d7bb13" name="Views" />
+      </childLayers>
+    </layer>
+    <layer Id="2414127b-8d93-4f3f-a73e-b185e7326083" name="Service Layer">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="b9a794c1-7c15-4f93-97ff-ceb56e42e48a" direction="Forward">
+          <layerMoniker Id="a4ccf0fa-c1a1-49a8-a81b-240b99c971da" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>
