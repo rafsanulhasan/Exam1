@@ -13,7 +13,7 @@ namespace Exam1.Library.ViewModels
 		where TEntity : EntityBase<TKey>
 		where TContext : DbContext
 		where TRepository : RepositoryBase<TEntity, TKey, TContext>, IRepository<TEntity, TKey>
-		where TUnitOfWork : UnitOfWorkBase<TEntity, TKey, TContext, TRepository>
+		where TUnitOfWork : UnitOfWorkBase<TEntity, TKey, TContext>
 		where TService : DataServiceBase<TUnitOfWork, TEntity, TKey, TContext, TRepository>
 	{
 		protected TService _Service;

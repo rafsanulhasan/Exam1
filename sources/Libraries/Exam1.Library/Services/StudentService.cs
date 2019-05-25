@@ -18,7 +18,7 @@ namespace Exam1.Library.Services
 
 		public override IQueryable<Student> Read(Expression<Func<Student, bool>> filter = null)
 		{
-			return _Uow.Repository.Read(filter);
+			return _Uow.Students.Read(filter);
 		}
 	}
 }
