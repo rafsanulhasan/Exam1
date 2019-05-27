@@ -16,9 +16,13 @@ namespace Exam1.Library.ViewModels
 		[Required]
 		public string Name { get; set; }
 
-		public override void Read(Expression<Func<Student, bool>> filter = null)
+		public override void Read(Expression<Func<Student, bool>> filter = null, int pageIndex = 1, int itemCount = 1)
 		{
-			var studentQuery = _Service.Read(filter);
+			var studentQuery = _Service
+									.Read(filter)
+									.Skip((pageIndex - 1) * itemCount)
+									.Take(itemCount);
+
 			Name = studentQuery.First().Name;
 		}
 	}

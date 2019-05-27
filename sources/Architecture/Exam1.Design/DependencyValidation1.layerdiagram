@@ -197,21 +197,14 @@
     </layer>
     <layer Id="73604893-0ba4-41f4-ae29-db286efeb85f" name="Application Layer">
       <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="dc15fade-3a8e-405e-a3e5-236ba2951d92" direction="Forward">
-          <layerMoniker Id="2414127b-8d93-4f3f-a73e-b185e7326083" />
+        <dependencyFromLayerToLayer Id="c90e7cea-8f95-4c86-ab72-378742dea805" direction="Forward">
+          <layerMoniker Id="a4ccf0fa-c1a1-49a8-a81b-240b99c971da" />
         </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <childLayers>
         <layer Id="8fb32209-dc63-450e-a160-6d200b6535a8" name="Controllers" />
         <layer Id="604bf1d6-a6f3-419b-b856-8520a5d7bb13" name="Views" />
       </childLayers>
-    </layer>
-    <layer Id="2414127b-8d93-4f3f-a73e-b185e7326083" name="Service Layer">
-      <dependencyToLayers>
-        <dependencyFromLayerToLayer Id="b9a794c1-7c15-4f93-97ff-ceb56e42e48a" direction="Forward">
-          <layerMoniker Id="a4ccf0fa-c1a1-49a8-a81b-240b99c971da" />
-        </dependencyFromLayerToLayer>
-      </dependencyToLayers>
     </layer>
   </layers>
 </layerModel>

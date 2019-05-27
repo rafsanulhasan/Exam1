@@ -14,11 +14,15 @@ namespace Exam1.Web.Controllers
 			_service = service;
 		}
 
+		/// <summary>
+		/// /Student
+		/// </summary>
+		/// <returns></returns>
 		public IActionResult Index()
 		{
 			var vm = new StudentViewModel();
 			vm.SetService(_service);
-			vm.Read();
+			vm.Read(pageIndex: 3, itemCount: 5);
 			return View(vm);
 		}
 	}

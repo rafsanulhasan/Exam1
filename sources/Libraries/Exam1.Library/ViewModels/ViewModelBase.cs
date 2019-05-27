@@ -23,6 +23,6 @@ namespace Exam1.Library.ViewModels
 			_Service = service;
 		}
 
-		public abstract void Read(Expression<Func<TEntity, bool>> filter = null);
+		public abstract void Read(Expression<Func<TEntity, bool>> filter = null, int pageIndex = 1, int pageCount = 1);
 	}
 }
